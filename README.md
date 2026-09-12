@@ -2,11 +2,11 @@
 
 A modern web application that helps developers explore, evaluate, and curate the best technologies for their next web development project. Users can browse a curated list of technologies, view their details, and build their own personalized dev stack with just a few clicks.
 
-## 🔗 Live Site
+##  Live Site
 
 [Click here to visit the live site](https://your-live-site-link.com)
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - **React.js** — Frontend library for building the UI
 - **Vite** — Fast build tool and development server
@@ -16,7 +16,7 @@ A modern web application that helps developers explore, evaluate, and curate the
 - **Lucide React** — For modern icons
 - **JSON** — For storing technology data
 
-## ✨ Key Features
+##  Key Features
 
 1. **Explore Technologies** — Browse 12+ technologies with detailed information like category, description, difficulty, rating, and a badge. Each card has an "Add to Stack" button.
 
@@ -24,7 +24,7 @@ A modern web application that helps developers explore, evaluate, and curate the
 
 3. **Responsive & Interactive UI** — Fully responsive across mobile, tablet, and desktop. Includes a mobile hamburger menu, a loading spinner while fetching JSON data, and toast notifications for every action (add, duplicate, remove, remove all).
 
-## 📚 React Questions & Answers
+##  React Questions & Answers
 
 ### 1. What is JSX, and why is it used in React?
 
@@ -74,7 +74,7 @@ Another example: the "Add to Stack" button shows **"✓ Added to Stack"** when `
 
 **Child → Parent:** A child sends data back by calling a function passed down as a prop. For example, when the user clicks "Add to Stack" inside `TechCard`, it calls `onAddToStack(tech)`, which is the parent's function that updates the `stack` state.
 
-## 📂 How to Run Locally
+##  How to Run Locally
 
 ```bash
 # Clone the repository
