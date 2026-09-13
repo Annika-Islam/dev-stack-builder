@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react'; // ✅ হ্যামবার্গার ও ক্লোজ আইকন
+import { Menu, X } from 'lucide-react'; 
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false); // ✅ মেনু খোলা/বন্ধ স্টেট
+  const [isOpen, setIsOpen] = useState(false); 
 
   const navLinks = [
     { name: 'Home', href: '#home', active: true },
@@ -16,10 +16,8 @@ const Navbar = () => {
     <nav className="w-full bg-white text-black border-b border-gray-200 px-6 py-4 sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto">
 
-        {/* Top Row */}
         <div className="flex items-center justify-between">
 
-          {/* ✅ Mobile: Hamburger Icon (Left) */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -30,7 +28,6 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* ✅ Logo (Center on mobile, Left on desktop) */}
           <div className="flex items-center gap-3 md:order-first">
             <img 
               src="logo-text.png" 
@@ -39,8 +36,7 @@ const Navbar = () => {
             />
           </div>
 
-          {/* ✅ Desktop: Center Menu Items */}
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium">
+                <div className="hidden md:flex items-center gap-8 text-sm font-medium">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -56,8 +52,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* ✅ Right Action Buttons (Always visible) */}
-          <div className="flex items-center gap-2 md:gap-4 text-sm font-medium">
+           <div className="flex items-center gap-2 md:gap-4 text-sm font-medium">
             <button className="text-gray-600 hover:text-black px-2 md:px-3 py-1.5 transition-colors">
               Sign In
             </button>
@@ -68,14 +63,13 @@ const Navbar = () => {
 
         </div>
 
-        {/* ✅ Mobile: Dropdown Menu (Only shows when isOpen is true) */}
-        {isOpen && (
+          {isOpen && (
           <div className="md:hidden mt-4 pt-4 border-t border-gray-200 space-y-3">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                onClick={() => setIsOpen(false)} // ✅ ক্লিক করলে মেনু বন্ধ হবে
+                onClick={() => setIsOpen(false)} 
                 className={`block px-2 py-2 text-sm font-medium rounded-lg transition-colors ${
                   link.active
                     ? 'text-pink-500 bg-pink-50'
