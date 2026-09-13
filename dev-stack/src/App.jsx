@@ -11,7 +11,7 @@ function App() {
   const [stack, setStack] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // ✅ JSON Data Fetching with useEffect
+  //  JSON Data Fetching with useEffect
   useEffect(() => {
     fetch('/technologies.json')
       .then((res) => res.json())
@@ -25,41 +25,35 @@ function App() {
       });
   }, []);
 
-  // ✅ Add to Stack (with Toast)
+  // Add to Stack with Toast
   const handleAddToStack = (tech) => {
     const isExist = stack.find((item) => item.id === tech.id);
     if (isExist) {
-      // ✅ Duplicate Add → toast.warning
+      
       toast.warning(`${tech.name} is already in your stack!`, { position: 'top-right' });
       return;
     }
     setStack([...stack, tech]);
-    // ✅ Add → toast.success
-    toast.success(`${tech.name} added to your stack!`, { position: 'top-right' });
+      toast.success(`${tech.name} added to your stack!`, { position: 'top-right' });
   };
 
-  // ✅ Remove single item (with Toast)
-  const handleRemoveFromStack = (id) => {
+    const handleRemoveFromStack = (id) => {
     const itemToRemove = stack.find((item) => item.id === id);
     setStack(stack.filter((item) => item.id !== id));
     if (itemToRemove) {
-      // ✅ Remove → toast.info
-      toast.info(`${itemToRemove.name} removed from stack.`, { position: 'top-right' });
+            toast.info(`${itemToRemove.name} removed from stack.`, { position: 'top-right' });
     }
   };
 
-  // ✅ Remove All (with Toast)
-  const handleRemoveAll = () => {
+    const handleRemoveAll = () => {
     if (stack.length === 0) return;
     setStack([]);
-    // ✅ Remove All → toast.error
-    toast.error('All technologies removed from stack!', { position: 'top-right' });
+       toast.error('All technologies removed from stack!', { position: 'top-right' });
   };
 
   return (
     <div className="min-h-screen bg-white text-black flex flex-col font-sans">
-      {/* ✅ ToastContainer যোগ করা হয়েছে */}
-      <ToastContainer position="top-right" autoClose={2000} />
+          <ToastContainer position="top-right" autoClose={2000} />
 
       <Navbar />
       <Hero />
@@ -122,7 +116,7 @@ function App() {
             </div>
 
             <div>
-              <h4 className="text-xs font-bold text-black uppercase tracking-wider mb-4">Product</h4>
+              <h4 className="text-xs font-bold text-black uppercase tracking-wider mb-4">PRODUCT</h4>
               <ul className="space-y-3">
                 <li><a href="#home" className="text-sm text-gray-500 hover:text-pink-500 transition-colors">Home</a></li>
                 <li><a href="#technologies" className="text-sm text-gray-500 hover:text-pink-500 transition-colors">Technologies</a></li>
@@ -131,7 +125,7 @@ function App() {
             </div>
 
             <div>
-              <h4 className="text-xs font-bold text-black uppercase tracking-wider mb-4">Company</h4>
+              <h4 className="text-xs font-bold text-black uppercase tracking-wider mb-4">COMPANY</h4>
               <ul className="space-y-3">
                 <li><a href="#about" className="text-sm text-gray-500 hover:text-pink-500 transition-colors">About</a></li>
                 <li><a href="#contact" className="text-sm text-gray-500 hover:text-pink-500 transition-colors">Contact</a></li>
@@ -140,7 +134,7 @@ function App() {
             </div>
 
             <div>
-              <h4 className="text-xs font-bold text-black uppercase tracking-wider mb-4">Legal</h4>
+              <h4 className="text-xs font-bold text-black uppercase tracking-wider mb-4">LEGAL</h4>
               <ul className="space-y-3">
                 <li><a href="#" className="text-sm text-gray-500 hover:text-pink-500 transition-colors">Privacy Policy</a></li>
                 <li><a href="#" className="text-sm text-gray-500 hover:text-pink-500 transition-colors">Terms of Service</a></li>
