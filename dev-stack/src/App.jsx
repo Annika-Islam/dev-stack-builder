@@ -60,10 +60,10 @@ function App() {
 
       <main id="technologies" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow w-full">
         <div className="mb-8 text-center md:text-left">
-          <h2 className="text-3xl font-extrabold text-black">
-            Explore the <span className="bg-brand-gradient bg-clip-text text-transparent">Technologies</span>
-          </h2>
-          <p className="text-gray-500 mt-1">Select technologies to curate your custom dev stack.</p>
+        <h2 className="text-4xl font-extrabold text-black">
+          Explore the <span className="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">Technologies</span>
+        </h2>
+          <p className="text-gray-500 mt-1"> Pick one technology per category to build your ideal stack .</p>
         </div>
 
         {loading ? (
